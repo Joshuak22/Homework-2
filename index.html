@@ -1,26 +1,31 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Simple House Scene – Joshua Knirel</title>
+  <title>Karate Training Dojo – Joshua Knirel</title>
   <script src="https://aframe.io/releases/1.7.0/aframe.min.js"></script>
 </head>
 <body>
   <a-scene>
     <!-- Ground -->
-    <a-plane position="0 0 0" rotation="-90 0 0" width="20" height="20" color="#7CFC00"></a-plane>
+    <a-plane position="0 0 0" rotation="-90 0 0" width="30" height="30" color="#7CFC00"></a-plane>
 
-    <!-- House walls -->
-    <a-box position="0 1 -5" width="4" height="2" depth="4" color="#FFD700"></a-box>
+    <!-- Dojo Floor (mat) -->
+    <a-plane position="0 0.01 -5" rotation="-90 0 0" width="6" height="6" color="#F5DEB3"></a-plane>
+
+    <!-- Walls -->
+    <a-box position="-3 1 -5" width="0.1" height="2" depth="6" color="#FFD700"></a-box> <!-- Left wall -->
+    <a-box position="3 1 -5" width="0.1" height="2" depth="6" color="#FFD700"></a-box> <!-- Right wall -->
+    <a-box position="0 1 -8" width="6" height="2" depth="0.1" color="#FFD700"></a-box> <!-- Back wall -->
+    <a-box position="0 1 -2" width="6" height="2" depth="0.1" color="#FFD700" opacity="0.3"></a-box> <!-- Front wall (transparent/open) -->
 
     <!-- Roof -->
-    <a-cone position="0 3 -5" radius-bottom="3" height="2" rotation="0 0 0" color="#8B0000"></a-cone>
+    <a-cone position="0 3 -5" radius-bottom="4.5" height="2.5" color="#8B0000"></a-cone>
 
-    <!-- Door -->
-    <a-box position="0 0.5 -3.98" width="1" height="1.5" depth="0.1" color="#654321"></a-box>
+    <!-- Karate Punching Bag -->
+    <a-cylinder position="0 1 -5" radius="0.3" height="2" color="#FF0000"></a-cylinder>
 
-    <!-- Windows -->
-    <a-box position="-1 1.5 -5.02" width="0.8" height="0.8" depth="0.1" color="#87CEEB"></a-box>
-    <a-box position="1 1.5 -5.02" width="0.8" height="0.8" depth="0.1" color="#87CEEB"></a-box>
+    <!-- Window -->
+    <a-box position="-2 1.2 -8.02" width="1" height="1" depth="0.1" color="#87CEEB"></a-box>
 
     <!-- Sky -->
     <a-sky color="#87CEEB"></a-sky>
